@@ -37,7 +37,7 @@ const char* String::operator+(const char* Other)
 	}
 	for (int i = Length; i < NewLength; i++)
 	{
-		NewString[i] = Other[i];
+		NewString[i] = Other[i - Length];
 	}
 	return NewString;
 }
@@ -58,7 +58,7 @@ const char* String::operator+(const String& Other)
 	}
 	for (int i = Length; i < NewLength; i++)
 	{
-		NewString[i] = Other.StringData[i];
+		NewString[i] = Other.StringData[i - Length];
 	}
 	return NewString;
 }
