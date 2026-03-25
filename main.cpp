@@ -24,7 +24,7 @@ int main()
 
 	MyArray.PushBack(7);
 	MyArray.PushBack(5);
-	//MyArray.PushBack(9);
+	MyArray.PushBack(9);
 
 	cout << "Size: " << MyArray.GetSize() << endl;
 	cout << "Capacity: " << MyArray.GetCapacity() << endl;

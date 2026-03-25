@@ -9,9 +9,9 @@ class DynamicArray
 public:
 	DynamicArray()
 	{
-		Data = nullptr;
 		Size = 0;
-		Capacity = 0;
+		Capacity = 1;
+		Data = new int[Capacity];
 	}
 	~DynamicArray()
 	{
@@ -27,11 +27,6 @@ public:
 		// Size가 Capacity보다 많으면 Capacity를 두배로 늘리고 새로운 배열 만들기
 		if (Size > Capacity)
 		{
-			if (Capacity == 0)
-			{
-				Capacity++;
-			}
-
 			Capacity *= 2;
 			NewData = new int[Capacity];
 
